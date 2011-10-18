@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+<head>
+<title>Rotten Tomatoes API</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/xhr.js"></script> 
+
+<script src="aUX_ui.min.js"></script>
+<script src="aUX_web.all.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="rottentomatoes.js"></script>
+
+<script type="text/javascript">
+	/* This function runs once the page is loaded, but appMobi is not yet active */
+	var init = function() {};
+	window.addEventListener("load", init, false);
+
+	/* This code prevents users from dragging the page */
+	var preventDefaultScroll = function(event) {
+		event.preventDefault();
+		window.scroll(0, 0);
+		return false;
+	};
+	document.addEventListener('touchmove', preventDefaultScroll, false);
+
+	/* This code is used to run as soon as appMobi activates */
+	var AMUi="";
+	var onDeviceReady = function() {
+		AppMobi.display.useViewport(320,480);
+		
+		//Use the appMobi UI
+		AMUi=new aUX.ui();
+		
+		check_keys();
+		
+		AppMobi.device.hideSplashScreen();
+		
+	};
+	document.addEventListener("appMobi.device.ready", onDeviceReady, false);
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="aUX_ui.css" /> 
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+</head>
+<body>
+
+	<div title="Rotten Tomatoes API" id="main" class="panel" selected="true">
+		<div id="flash"></div>
+		
+		<div id="header_images">
+			<img id="logo1" src="images/rotten.png" style="width:90px;margin-top:7px;"/>
+			<img id="logo2" src="images/masherymade.png" style="float:right;"/>
+		</div>
+		
+		<p>The Rotten Tomatoes API gives access to Rotten Tomatoes' wealth of movie information, allowing anyone to build applications and widgets enriched with Rotten Tomatoes data.</p>
+
+		<p>Visit <a href="http://developer.rottentomatoes.com" target="_blank">developer.rottentomatoes.com</a> to get your free API key today.</p>
+
+				<p style="text-align:center;"><button id="btnUser" ontouchstart="topMovies();">Top Movies</button> <button id="btnUser" ontouchstart="topRentals();">Top DVD Rentals</button></p>
+
+
+		<div id="output">
+			<div class="output-inner" id="rotten-output" style="display:none;">
+				<div class="movies">
+					
+				</div>
+			</div>
+
+
+		</div>
+	</div> 
+	
+</body>
+
+</html>
