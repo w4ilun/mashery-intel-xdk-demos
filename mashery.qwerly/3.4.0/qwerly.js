@@ -11,6 +11,7 @@ var api_key ='your_api_key_here';
 function check_keys()
 {
         AppMobi.device.getRemoteData('http://api.qwerly.com/v1/twitter/t?&api_key='+ api_key,"GET","","displayFlashMessage","displayFlashMessage");
+
 }
 
 function displayFlashMessage (rawPayload)
@@ -46,13 +47,19 @@ function displayFlashMessage (rawPayload)
 		$('#flash').addClass('green');
 		$('#flash').html("<p class='center green'>Valid API Key Found</p>");
 	  }
+
+	  containsHTTP = rawPayload.substr(0,4)
+	 if (containsHTTP == 'http'){
+		AppMobi.notification.alert('Profile Not Found','Invalid Email','OK');
+	}
+
 }
 
 function searchTwitter()
 {	
-		var search = $('#search').val();
-		var url = 'http://api.qwerly.com/v1/twitter/'+search+'?&api_key=' + api_key;
-        AppMobi.device.getRemoteData(url,"GET","","searchTwitterCB","displayFlashMessage");
+	var search = $('#search').val();
+	var url = 'http://api.qwerly.com/v1/twitter/'+search+'?&api_key=' + api_key;
+       AppMobi.device.getRemoteData(url,"GET","","searchTwitterCB","displayFlashMessage");
 }
 
 function searchTwitterCB(rawPayload)
@@ -117,8 +124,8 @@ function searchEmailCB(rawPayload)
 	var profile = data.profile;
 	var services = data.profile.services;
 	
-	if (data.profile) {
-		alert('Not Found');
+	if (!data.profile) {
+		AppMobi.notification.alert('Profile Not Found','Oops','OK');
 	}
 
 	$("#email-output").show();
