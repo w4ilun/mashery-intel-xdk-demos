@@ -51,7 +51,9 @@ variable api_key on line 1 of the file outsidein.js, like so -
 
 ABOUT THE OUTSIDE.IN API
 ==================================================================
-Outside.in API lets you easily integrate professional hyperlocal content in your sites and applications Learn more about the Outside.in API at http://developer.outside.in
+Outside.in API lets you easily integrate professional hyperlocal content 
+in your sites and applications Learn more about the Outside.in API at 
+http://developer.outside.in
 
 
 OUTSIDE.IN API DOCUMENTATION
