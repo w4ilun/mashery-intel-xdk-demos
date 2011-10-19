@@ -18,10 +18,7 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-1. Uses Klout's API to query hundreds of millions of social web profiles.
-2. Search by Twitter Username
-3. Search by Facebook Username
-4. Search by Email address
+Uses Klout's API to find Klout score based on your Twitter handle (Supports up to three comma separated handles)
 
 
 
@@ -52,10 +49,17 @@ variable api_key on line 1 of the file Klout.js, like so -
 
 ABOUT THE KLOUT API
 ==================================================================
-Klout lets you mine the public web for information about your customers, 
-users or leads. Query hundreds of millions of social web profiles by 
-email, Twitter username or Facebook ID. Supports results from over 125 
-social networks. Learn more about the Klout API at http://developer.Klout.com
+
+Klout API allows developers access to the following information -
+
+1. Klout Score - The Klout Score is the measurement of your overall online influence. The scores range from 1-100 with higher scores representing a wider and stronger sphere of influence.
+2. Network Influence - Network Influence is the influence level of your engaged audience. Capturing the attention of influencers is no easy task, and those who are able to do so are typically creating spectacular content.
+3. Amplification Probability -  Amplification Probability is the likelihood that your content will be acted upon. The ability to create content that compels others to respond and high-velocity content that spreads into networks beyond your own is a key component of influence.
+4. True Reach - True Reach is the size of your engaged audience. We eliminate inactive and spam accounts, and only include accounts that you influence.
+5. Influential About - The topics you are most influential about based not on what you talk about the most but on the subjects you get the most engagement on. 
+6. Influencer Of/Influenced By: These are the people who you influence and who you are influenced by based on social actions.
+
+Learn more about the Klout API at http://developer.Klout.com
 
 
 KLOUT API DOCUMENTATION
