@@ -91,10 +91,12 @@ the most advanced API management and reporting tools to our clients.
 EXPLORE MORE APIS
 ==================================================================
 Check out Mashery's API Network at http://developer.mashery.com/apis
-to explore other awesome APIs including NY Times, Klout, USA TODAY, Rotten Tomatoes, Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. 
+to explore other awesome APIs including NY Times, Klout, USA TODAY, 
+Rotten Tomatoes, Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. 
 
 
 
 SUPPORT
 ==================================================================
-If you have any questions or need any help obtaining an API key, you can reach out to us at: developer-relations@mashery.com
+If you have any questions or need any help obtaining an API key, 
+you can reach out to us at: developer-relations@mashery.com
