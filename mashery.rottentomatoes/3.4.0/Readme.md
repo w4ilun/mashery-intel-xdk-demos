@@ -18,10 +18,10 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-1. Uses Rotten Tomatoes's API to query hundreds of millions of social web profiles.
-2. Search by Twitter Username
-3. Search by Facebook Username
-4. Search by Email address
+Uses Rotten Tomatoes's API to find -
+
+1. Top Box Movie Movies
+2. Top DVD Rentals
 
 
 
@@ -37,8 +37,8 @@ You will need the following to get started -
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API 
-key from Rotten Tomatoes at http://developer.rottentomatoes.com/member/register. This 
-will also give you a Single Sign-On Mashery ID with access to hundreds
+key from Rotten Tomatoes at http://developer.rottentomatoes.com/member/register. 
+This will also give you a Single Sign-On Mashery ID with access to hundreds
 of other APIs.
 
 
@@ -53,11 +53,10 @@ variable api_key on line 1 of the file RottenTomatoes.js, like so -
 
 ABOUT THE ROTTEN TOMATOES API
 ==================================================================
-Rotten Tomatoes lets you mine the public web for information about your 
-customers, users or leads. Query hundreds of millions of social 
-web profiles by email, Twitter username or Facebook ID. Supports 
-results from over 125 social networks. Learn more about the 
-Rotten Tomatoes API at http://developer.rottentomatoes.com
+Rotten Tomatoes API gives access to Rotten Tomatoes' wealth of movie 
+information, allowing anyone to build applications and widgets enriched 
+with Rotten Tomatoes data. Learn more about the Rotten Tomatoes API at 
+http://developer.rottentomatoes.com
 
 
 ROTTEN TOMATOES API DOCUMENTATION
@@ -81,9 +80,11 @@ the most advanced API management and reporting tools to our clients.
 EXPLORE MORE APIS
 ==================================================================
 Check out Mashery's API Network at http://developer.mashery.com/apis
-to explore other awesome APIs including NY Times, Klout, USA TODAY, Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. 
+to explore other awesome APIs including NY Times, Klout, USA TODAY, 
+Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. 
 
 
 SUPPORT
 ==================================================================
-If you have any questions or need any help obtaining an API key, you can reach out to us at: developer-relations@mashery.com
+If you have any questions or need any help obtaining an API key, 
+you can reach out to us at: developer-relations@mashery.com
