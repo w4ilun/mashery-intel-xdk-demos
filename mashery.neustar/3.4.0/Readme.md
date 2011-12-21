@@ -1,4 +1,4 @@
-QUOVA API DEMO APP
+NEUSTAR IP INTELLIGENCE API DEMO APP
 ==================================================================
 Created lovingly for the developer community by Mashery.
 
@@ -9,7 +9,7 @@ http://developer.mashery.com
 
 SYNOPSIS
 ==================================================================
-This demo App provides a way to see the Quova's API in action. 
+This demo App provides a way to see the Neustar IP Intelligence's API in action. 
 It's built using appMobi's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
@@ -18,7 +18,7 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-Uses Quova's API to retrieve the following information based on 
+Uses Neustar IP Intelligence's API to retrieve the following information based on 
 any IPv4 (x.x.x.x) address:
 
 1. City
@@ -33,14 +33,14 @@ GETTING STARTED
 You will need the following to get started -
 
 1. appMobi's XDK - free download at http://www.appmobi.com/?q=node/27
-2. A Quova API key - register at http://developer.quova.com/member/register
+2. A Neustar IP Intelligence API key - register at http://developer.quova.com/member/register
 
 
 
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API 
-key from Quova at http://developer.quova.com/member/register . This 
+key from Neustar at http://developer.quova.com/member/register . This 
 will also give you a Single Sign-On Mashery ID with access to hundreds
 of other APIs.
 
@@ -49,7 +49,7 @@ of other APIs.
 SETTING UP THE API KEY IN THIS APP
 ==================================================================
 Once you have obtained your API key, assign the API key and secret
-to the JavaScript variables located near the top of the quova.js
+to the JavaScript variables located near the top of the neustar.js
 file, like so:
 
 <pre>
@@ -58,18 +58,18 @@ file, like so:
 
 
 
-ABOUT THE QUOVA API
+ABOUT THE NEUSTAR IP INTELLIGENCE API
 ==================================================================
-Quova provides the most complete and accurate IP geolocation data
+Neustar IP Intelligence provides the most complete and accurate IP geolocation data
 available on the planet. And it’s the most accurate. Tap into the
 datasource and develop your own customized geolocation apps. 
-Learn more about the Quova API at http://developer.quova.com
+Learn more about the Neustar IP Intelligence API at http://developer.quova.com
 
 
 
-QUOVA API DOCUMENTATION
+NEUSTAR IP INTELLIGENCE API DOCUMENTATION
 ==================================================================
-To learn more about the data set provided by Quova's API, you can
+To learn more about the data set provided by Neustar IP Intelligence's API, you can
 read through the API documentation at http://developer.quova.com/docs
 or use their interactive documentation at http://developer.quova.com/iodocs
 to explore and learn how to use their API by example.

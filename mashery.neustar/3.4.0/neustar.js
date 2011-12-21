@@ -1,10 +1,10 @@
 // *******************SET YOUR API KEY HERE*******************
 // ***********************************************************
 
-// Insert your Quova API Key here. ReadMe for more info.
+// Insert your Neustar API Key here. ReadMe for more info.
 var apikey ='your_api_key_here';
 
-// Insert your Quova secret key here. ReadMe for more info.
+// Insert your Neustar secret key here. ReadMe for more info.
 var secret ='your_api_secret_here';
 
 // ***********************************************************
@@ -34,7 +34,7 @@ function displayFlashMessage(rawPayload)
 		AppMobi.notification.alert('Please check the Readme.md file for instructions','Invalid API Key','OK');
 		$('#map_canvas').hide();
 		$('#flash').addClass('red');
-		$('#flash').html("<p class='center'><strong>Quova API Key Invalid</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above)</p>");
+		$('#flash').html("<p class='center'><strong>Neustar IP Intelligence API Key Invalid</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above)</p>");
 	  }
 	  else { 
 		$('#flash').addClass('green');
@@ -54,12 +54,12 @@ function getURL()
 	return url;
 }
 
-function getQuova()
+function getNeustar()
 {
-    AppMobi.device.getRemoteData(getURL(),"GET","","getQuovaCB","displayFlashMessage");
+    AppMobi.device.getRemoteData(getURL(),"GET","","getNeustarCB","displayFlashMessage");
 }
 
-function getQuovaCB(rawPayload)
+function getNeustarCB(rawPayload)
 {
 	var data = $.parseJSON(rawPayload);
 	var country = data.ipinfo.Location.CountryData.country;
