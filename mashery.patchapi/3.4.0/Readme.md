@@ -1,4 +1,4 @@
-OUTSIDE.IN API DEMO APP
+PATCH API DEMO APP
 ==================================================================
 Created lovingly for the developer community by Mashery.
 
@@ -9,7 +9,7 @@ http://developer.mashery.com
 
 SYNOPSIS
 ==================================================================
-This demo App provides a way to see the Outside.in API in action. 
+This demo App provides a way to see the Patch API in action. 
 It's built using appMobi's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
@@ -18,7 +18,7 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-1. Uses Outside.in's API to find hyperlocal content.
+1. Uses Patch's API to find hyperlocal content.
 2. Find stories by  GeoLocation
 3. Find Stories by City/State
 
@@ -29,36 +29,36 @@ GETTING STARTED
 You will need the following to get started -
 
 1. appMobi's XDK. Free Download - http://www.appmobi.com/?q=node/27
-2. A Outside.in API key (Register at http://developers.patch.com/member/register).
+2. A Patch API key (Register at http://developers.patch.com/member/register).
 
 
 
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API key 
-from Outside.in at http://developers.patch.com/member/register. This will also 
+from Patch at http://developers.patch.com/member/register. This will also 
 give you a Single Sign-On Mashery ID with access to hundreds of other APIs.
 
 
 SETTING UP THE API KEY IN THIS APP
 ==================================================================
 Once you have obtained your API key, assign the API key to the 
-variable api_key on line 1 of the file outsidein.js, like so -
+variable api_key on line 1 of the file patch.js, like so -
 
 <pre>
 	var api_key ='your_api_key_here';
 </pre>
 
-ABOUT THE OUTSIDE.IN API
+ABOUT THE PATCH API
 ==================================================================
-Outside.in API lets you easily integrate professional hyperlocal content 
-in your sites and applications Learn more about the Outside.in API at 
-http://developer.outside.in
+Patch API lets you easily integrate professional hyperlocal content 
+in your sites and applications Learn more about the Patch API at 
+http://developer.patch.com
 
 
-OUTSIDE.IN API DOCUMENTATION
+PATCH API DOCUMENTATION
 ==================================================================
-To learn more about the data set provided by Outside.in's API, you can read 
+To learn more about the data set provided by Patch's API, you can read 
 through the API documentation at http://developers.patch.com/docs
 
 

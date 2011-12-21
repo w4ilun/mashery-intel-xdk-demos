@@ -1,10 +1,10 @@
 // *******************SET YOUR API KEY HERE*******************
 // ***********************************************************
 
-// Insert your Outside.in API Key here. ReadMe for more info.
+// Insert your Patch API Key here. ReadMe for more info.
 var apikey ='your_api_key_here';
 
-// Insert your Outside.in secret key here. ReadMe for more info.
+// Insert your Patch secret key here. ReadMe for more info.
 var secret ='your_secret_key_here';
 
 // ***********************************************************
@@ -42,7 +42,7 @@ function displayFlashMessage(rawPayload)
 	  else if(httpStatus == '403') { 
 		AppMobi.notification.alert('Please check the Readme.md file for instructions','Invalid API Key','OK');
 		$('#flash').addClass('red');
-		$('#flash').html("<p class='center'><strong>Outside.in API Key Invalid</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above)</p>");
+		$('#flash').html("<p class='center'><strong>Patch API Key Invalid</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above)</p>");
 	  }
 	  else { 
 		$('#flash').addClass('green');
@@ -53,7 +53,7 @@ function displayFlashMessage(rawPayload)
 
 function getURL(base_url)
 {
-	// Outside.in requires the API calls to include a Digital Signature.
+	// Patch requires the API calls to include a Digital Signature.
 	// The digital signature is an MD5 hash of apikey, your shared secret, and the timestamp.
 	var timestamp = Math.round((new Date()).getTime()/1000).toString();
 	var sig = $.md5(apikey + secret + timestamp);
