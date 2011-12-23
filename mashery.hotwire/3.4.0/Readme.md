@@ -31,7 +31,7 @@ You will need the following to get started -
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API key 
-from Klout at http://developer.hotwire.com/member/register. This will also 
+from Hotwire at http://developer.hotwire.com/member/register. This will also 
 give you a Single Sign-On Mashery ID with access to hundreds of other APIs.
 
 
