@@ -1,4 +1,4 @@
-KLOUT API DEMO APP
+HOTWIRE API DEMO APP
 ==================================================================
 Created lovingly for the developer community by Mashery.
 
@@ -9,17 +9,15 @@ http://developer.mashery.com
 
 SYNOPSIS
 ==================================================================
-This demo App provides a way to see the Klout API in action. 
-It's built using appMobi's Cross Platform Development Kit (XDK) 
+This demo App provides a way to see the Hotwire API in action. 
+It is built using appMobi's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
 
 
-
-FEATURES
+WHAT DOES THIS APP DO?
 ==================================================================
-Uses Klout's API to find Klout score based on your Twitter handle (Supports up to three comma separated handles)
-
+Uses Hotwire's API to find fantastic hotel deals within the vicinity of a postal code.
 
 
 GETTING STARTED
@@ -27,45 +25,58 @@ GETTING STARTED
 You will need the following to get started -
 
 1. appMobi's XDK. Free Download - http://www.appmobi.com/?q=node/27
-2. A Klout API key (Register at http://developer.Klout.com/member/register).
-
+2. A Hotwire API key (Register at http://developer.hotwire.com/member/register).
 
 
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API key 
-from Klout at http://developer.Klout.com/member/register. This will also 
+from Klout at http://developer.hotwire.com/member/register. This will also 
 give you a Single Sign-On Mashery ID with access to hundreds of other APIs.
 
 
 SETTING UP THE API KEY IN THIS APP
 ==================================================================
 Once you have obtained your API key, assign the API key to the 
-variable api_key on line 1 of the file Klout.js, like so -
+variable api_key on line 1 of the file hotwire.js, like so -
 
 <pre>
 	var api_key ='your_api_key_here';
 </pre>
 
-ABOUT THE KLOUT API
+
+ABOUT THE HOTWIRE API
 ==================================================================
+Hotwire's APIs allows developer to access travel deals and pricing information. The APIs available are:
 
-Klout API allows developers access to the following information -
+1. Hotel Deals
+2. Hotel Shopping
+3. Rental Car Shopping
+4. TripStarter
+5. Travel Ticker Deals
 
-1. Klout Score - The Klout Score is the measurement of your overall online influence. The scores range from 1-100 with higher scores representing a wider and stronger sphere of influence.
-2. Network Influence - Network Influence is the influence level of your engaged audience. Capturing the attention of influencers is no easy task, and those who are able to do so are typically creating spectacular content.
-3. Amplification Probability -  Amplification Probability is the likelihood that your content will be acted upon. The ability to create content that compels others to respond and high-velocity content that spreads into networks beyond your own is a key component of influence.
-4. True Reach - True Reach is the size of your engaged audience. We eliminate inactive and spam accounts, and only include accounts that you influence.
-5. Influential About - The topics you are most influential about based not on what you talk about the most but on the subjects you get the most engagement on. 
-6. Influencer Of/Influenced By: These are the people who you influence and who you are influenced by based on social actions.
+In this demo app we utilize the Hotel Deals API. In the source code
+you can observe how easy it is to make an API call, parse the 
+API response and return the information back to the end-user. 
 
-Learn more about the Klout API at http://developer.Klout.com
+Get detailed information about the Hotwire APIs at 
+http://developer.hotwire.com/docs/read/Home
+
+HOTWIRE AFFILIATE PROGRAM
+=========================
+Monetizing your apps built on top of the Hotwire API is possible
+with the Hotwire affiliate program. When you are approved, you
+modify your API calls to include your affiliate ID. Qualified
+airline, hotel and rental car bookings will earn you money as
+end-users find and purchase travel deals. 
+
+You can find out more at the Hotwire develeoper portal. 
 
 
-KLOUT API DOCUMENTATION
+HOTWIRE INTERACTIVE API DOCUMENTATION
 ==================================================================
-To learn more about the data set provided by Klout's API, you can read 
-through the API documentation at http://developer.Klout.com/iodocs
+To learn more about the data set provided by Hotwire's APIs, visit
+their interactive documentation at http://developer.hotwire.com/iodocs
 
 
 ABOUT THE MASHERY API NETWORK
@@ -83,7 +94,8 @@ EXPLORE MORE APIS
 ==================================================================
 Check out Mashery's API Network at http://developer.mashery.com/apis
 to explore other awesome APIs including NY Times, Klout, USA TODAY, 
-Rotten Tomatoes, Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. 
+Rotten Tomatoes, Best Buy, Hoovers, Edmunds, Netflix, Rdio,
+ESPN, Rovi and many more. 
 
 
 SUPPORT
