@@ -16,12 +16,12 @@ function setdefaultFlash(){
 	$('#flash').show();
 	$('#flash').addClass('red');
 	$('#flash').removeClass('green');
-	$('#flash').html("<p class='center'><strong>Weather Bug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
+	$('#flash').html("<p class='center'><strong>WeatherBug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
 	
 }
 // Check if valid API Key
 function check_keys(){			
-		var url = 'http://i.wxbug.net/REST/Direct/GetForecastHourly.ashx?zip=21044&ht=d&api_key=' + api_key + '&f=displayMessage';
+		var url = 'http://i.wxbug.net/REST/Direct/GetForecastHourly.ashx?zip=21044&ht=t&api_key=' + api_key + '&f=displayMessage';
 		$.ajax({
 		    url: url,
 		    dataType: "jsonp",
@@ -33,7 +33,7 @@ function check_keys(){
 function displayErrorMessage(data) { 
 	$('#flash').addClass('red');
 	$('#flash').removeClass('green');
-	$('#flash').html("<p class='center'><strong>Weather Bug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
+	$('#flash').html("<p class='center'><strong>WeatherBug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
 }
 
 function displayMessage(data) { 
@@ -46,7 +46,7 @@ function displayMessage(data) {
 		else{
 			AppMobi.notification.alert('Please check the Readme.md file for instructions','Invalid API Key','OK');
 			$('#flash').addClass('red');
-			$('#flash').html("<p class='center'><strong>Weather Bug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
+			$('#flash').html("<p class='center'><strong>WeatherBug API Key Not Found</strong></p><p>Please see <a target='_blank' href='Readme.md'>ReadMe</a> file located in the Project directory for instructions.</p><p>(Hint: To locate your project directory, click on the <img class='middle' style='width:35px;margin-left:-5px;' src='images/project_icon.png'/> icon on the Emulator Toolbar above</p>");
 		}
 
 	  }
