@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mashery-appmobi-demos by mashery</title>
+	
+	<!-- overriding with Bootstrap and mashery-tools.css -->
+	<link href="http://mashery.github.com/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://mashery.github.com/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://mashery.github.com/assets/css/docs.css" rel="stylesheet">
+    <link href="http://mashery.github.com/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<link href="http://mashery.github.com/assets/css/mashery-tools.css" rel="stylesheet">
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -14,8 +21,46 @@
   </head>
   <body>
     <div class="wrapper">
+	
+		<!-- BEGIN mashery navigation bar -->
+		<div class="navbar navbar-fixed-top">
+		      <div class="navbar-inner">
+		        <div class="container">
+				<div id="logo"><img src="http://mashery.github.com/assets/img/mashery-logo.png" class="bs-icon"></div>
+
+		          <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <!-- <a class="brand" href="./index.html">Bootstrap</a> -->
+		          <div class="nav-collapse collapse">
+		            <ul class="nav">
+		              <li class="">
+		                <a href="http://dev.mashery.com">Home</a>
+		              </li>
+		              <li class="">
+		                <a href="http://dev.mashery.com/apis">APIs</a>
+		              </li>
+		              <li class="active">
+		                <a href="http://mashery.github.com">Tools</a>
+		              </li>
+		              <li class="">
+		                <a href="http://mashery.appstores.com">Apps</a>
+		              </li>
+		              <li class="">
+		                <a href="http://masherydev.tumblr.com">Blog</a>
+		              </li>
+		            </ul>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		<!-- END mashery navigation bar -->
+	
+	
       <header>
-        <h1>Mashery-appmobi-demos</h1>
+        <hr class="soften"><h1>Mashery-appmobi-demos</h1>
         <p>Mashery API Network demo apps for appMobi Platform</p>
 
         <p class="view"><a href="https://github.com/mashery/mashery-appmobi-demos">View the Project on GitHub <small>mashery/mashery-appmobi-demos</small></a></p>
@@ -28,7 +73,7 @@
         </ul>
       </header>
       <section>
-        <h1>Mashery Network API Demo Apps for appMobi XDK</h1>
+        <h2>Mashery Network API Demo Apps for appMobi XDK</h2>
 
 <p>Created lovingly for the developer community by Mashery.</p>
 
@@ -36,19 +81,19 @@
 
 <p><a href="http://developer.mashery.com">http://developer.mashery.com</a></p>
 
-<h1>SYNOPSIS</h1>
+<hr class="soften"><h2>SYNOPSIS</h2>
 
 <p>These demo apps provide a way to see various Mashery Network APIs 
 in action. They're built using appMobi's Cross Platform Development
 Kit (XDK) that lets you create mobile apps for smartphones and 
 tablets using standard web languages (HTML5, CSS, and JavaScript).</p>
 
-<h1>GETTING STARTED</h1>
+<hr class="soften"><h2>GETTING STARTED</h2>
 
 <p>You will need an API key for the platform used in the demo app. 
 This is very simple and free. Just follow the directions within the Readme.md file within each sub-directory below.</p>
 
-<h1>SETTING UP THE API KEY IN THESE APPS</h1>
+<hr class="soften"><h2>SETTING UP THE API KEY IN THESE APPS</h2>
 
 <p>Once you have obtained your API key, assign the API key to the 
 API key variable near the top of the file JavaScript, like so:</p>
@@ -57,7 +102,7 @@ API key variable near the top of the file JavaScript, like so:</p>
     var api_key ='your_api_key_here';
 </pre>
 
-<h1>ABOUT THE MASHERY API NETWORK</h1>
+<hr class="soften"><h2>ABOUT THE MASHERY API NETWORK</h2>
 
 <p>Mashery is the world's leading API management service provider, 
 helping companies provide the best API experience for developers,
@@ -66,13 +111,13 @@ to our clients. The Mashery API Network (<a href="http://developer.mashery.com">
 s an open data commons of over 50 RESTful APIs that developers can 
 access with their Mashery ID.</p>
 
-<h1>EXPLORE MORE APIs</h1>
+<hr class="soften"><h2>EXPLORE MORE APIs</h2>
 
 <p>Check out Mashery's API Network at <a href="http://developer.mashery.com/apis">http://developer.mashery.com/apis</a>
 to explore other awesome APIs including NY Times, Klout, USA TODAY,
 Rotten Tomatoes, Best Buy, Hoovers, Edmunds, Netflix, Rdio and many more. </p>
 
-<h1>SUPPORT</h1>
+<hr class="soften"><h2>SUPPORT</h2>
 
 <p>If you have any questions or need any help obtaining an API key, you can reach out to us at: <a href="mailto:developer-relations@mashery.com">developer-relations@mashery.com</a></p>
       </section>
