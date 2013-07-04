@@ -12,7 +12,22 @@ var api_key ='jhmy9cqeamummcysjvv2mcpr';
 
 var map=""; //google maps object
 
+function launch() {
+    setdefaultFlash();
+    check_keys();
+    setTimeout(
+	function() {
+	    getData();
+	    setTimeout(
+		function() {
+		    findWeatherZip();
+		}, 600);
+	}, 
+	600);
+}
+
 function setdefaultFlash(){
+    console.log('setdefaultflash');
     $('#flash').show();
     $('#flash').addClass('red');
     $('#flash').removeClass('green');
@@ -26,7 +41,8 @@ function check_keys(){
 	url: url,
 	dataType: 'jsonp',
 	jsonp: 'f',
-	success: displayMessage
+	success: displayMessage,
+	error: errorCB
     });
 }
 
@@ -86,9 +102,10 @@ function findWeatherGeo(latitude, longitude)
 }
 
 // Using WeatherBug's API to get forecast based on the zip code entered in the zip_code input box.
-function findWeatherZip(zip, callbackFunction)
+function findWeatherZip()
 {
-    var zip = document.getElementById("zip_code").value;
+    var zip = $('#zipcode').val();
+    console.log('zip code: ' + zip);
     var url = 'http://i.wxbug.net/REST/Direct/GetForecast.ashx?zip='+ zip +'&api_key='+ api_key + '&nf=7&ht=t&ht=cp';
     $.ajax({
 	url: url,
@@ -119,15 +136,9 @@ function findWeatherZipCB(data)
 	var template = $('#tpl').html();
 	var html = Mustache.to_html(template, {forecastList:data.forecastList}); 
 	$('#divZip').html(html);
-	$('#output').html(html);
     } catch(e){ 
-	reset_screen(); 
 	AppMobi.notification.alert('Invalid Zip','Weather Not Found','OK');
     }
-}
-
-function reset_screen(){
-    $("#output").html('');
 }
 
 function errorCB(data)
