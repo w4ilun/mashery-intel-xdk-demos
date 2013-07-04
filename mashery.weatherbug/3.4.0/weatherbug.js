@@ -83,7 +83,8 @@ function getData() {
 // Using WeatherBug's API to get forecast based on the current latitude/longitude positions
 function findWeatherGeo(latitude, longitude, callbackFunction)
 {
-	check_keys();
+	// rate limiting will make back to back calls fail. Delay the API call to check keys
+	setTimeout(function() {check_keys();}, 1000);
 	
 	AppMobi.device.getRemoteData('http://i.wxbug.net/REST/Direct/GetForecast.ashx?la='+ latitude + '&lo='+ longitude + '&nf=7&ht=t&ht=i&l=en&c=US&api_key='+ api_key,"GET","",callbackFunction,"errorCB");	
 }
@@ -91,8 +92,6 @@ function findWeatherGeo(latitude, longitude, callbackFunction)
 // Using WeatherBug's API to get forecast based on the zip code entered in the zip_code input box.
 function findWeatherZip(zip, callbackFunction)
 {
-	check_keys();
-	
 	var zip = document.getElementById("zip_code").value;
 	var callbackFunction = 'findWeatherZipCB'	
 	AppMobi.device.getRemoteData('http://i.wxbug.net/REST/Direct/GetForecast.ashx?zip='+ zip +'&api_key='+ api_key + '&nf=7&ht=t&ht=cp',"GET","",callbackFunction,"errorCB");
