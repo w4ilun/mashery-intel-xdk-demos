@@ -1,7 +1,0 @@
-{
-  "name": "3.4.0",
-  "version": "0.0.0",
-  "dependencies": {
-    "mustache": "~0.7.2"
-  }
-}

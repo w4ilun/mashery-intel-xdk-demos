@@ -7,7 +7,7 @@
 		<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
 		<script src="aUX_ui.min.js"></script>
 		<script src="aUX_web.all.min.js"></script>
-		<script src="bower_components/mustache/mustache.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 		<script src="weatherbug.js"></script>
 		<script type="text/javascript">
@@ -72,8 +72,10 @@
 		<img class="photo" src="http://img.weather.weatherbug.com/forecast/icons/localized/50x42/en/trans/{{dayIcon}}.png" />
 		{{title}}<br/>&nbsp;
 		<small>{{dayPred}}</small><br/>
+		{{#hasNight}}
 		<img class="photo" src="http://img.weather.weatherbug.com/forecast/icons/localized/50x42/en/trans/{{nightIcon}}.png" />
 		<small>{{nightPred}}</small><br/>
+		{{/hasNight}}
 	    </li>
 	    {{/forecastList}}
 	  </ul>
