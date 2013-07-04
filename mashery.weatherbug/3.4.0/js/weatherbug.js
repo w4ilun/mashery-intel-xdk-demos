@@ -4,8 +4,7 @@
 // Insert your WeatherBug REST XML API Key here. ReadMe for more info.
 // Do not plug in your WeatherBug GEO Basic API Key. It must be the
 // REST XML API Key (which also works for JSON requests)
-//var api_key ='your_api_key_here';
-var api_key ='jhmy9cqeamummcysjvv2mcpr';
+var api_key ='your_api_key_here';
 
 // ***********************************************************
 // ***********************************************************
