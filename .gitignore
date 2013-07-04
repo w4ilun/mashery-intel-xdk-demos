@@ -7,3 +7,5 @@ mashery.qwerly/.DS_Store
 mashery.weatherbug/3.4.0/.DS_Store
 mashery.weatherbug/.DS_Store
 .DS_Store
+*~
+bower_components

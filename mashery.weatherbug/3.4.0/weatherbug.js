@@ -102,36 +102,33 @@ function findWeatherZip(zip, callbackFunction)
 // Callback function for the function findWeatherGeo()
 function findWeatherGeoCB(data)
 {
+    console.log('data: ' + JSON.stringify(data));
     try {
-	var content=aUX.web.template("geo_list_tpl",{forecastList:data.forecastList}); 
-	AMUi.updateContentDiv("divGeo",content);  
-    } catch(e){ 
+	var template = $('#tpl').html();
+	var html = Mustache.to_html(template, {forecastList:data.forecastList}); 
+	$('#divGeo').html(html);
+    } catch(e){
 	alert("error in findWeatherGeoCB: " + e.message); 
     }
-    AMUi.hideMask(); 
 }
 
 // Callback function for the function findWeatherZip()
 function findWeatherZipCB(data)
 {
     try {
- 	var content=aUX.web.template("zip_list_tpl",{forecastList:data.forecastList}); 
-	AMUi.updateContentDiv("divZip",content); 
- 
-	document.getElementById("output").innerHTML = content;
-  
-	AMUi.hideMask();
- 
+	var template = $('#tpl').html();
+	var html = Mustache.to_html(template, {forecastList:data.forecastList}); 
+	$('#divZip').html(html);
+	$('#output').html(html);
     } catch(e){ 
 	reset_screen(); 
-	AppMobi.notification.alert('Invalid Zip','Weather Not Found','OK'); AMUi.hideMask(); 
+	AppMobi.notification.alert('Invalid Zip','Weather Not Found','OK');
     }
 }
 
 function reset_screen(){
     $("#output").html('');
 }
-
 
 function errorCB(data)
 {
