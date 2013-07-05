@@ -71,6 +71,22 @@ can read through the API documentation at
 http://developer.weatherbug.com/docs
 
 
+Intel XDK
+==================================================================
+Intel XDK provides tools for testing your application in a simulator,
+on your device, and building it for Apple, Android, and other stores.
+Start it at http://xdk-software.intel.com.  1. Create a new project by
+clicking on the 'Start New' button in the top left. Select 'Create
+your own from scratch,' and then 'Use a blank project.' Open the
+folder containing the new project by clicking on the folder above
+'development tools' in the top middle. Remove the current contents and
+replace it with the files in this folder.
+
+If you want to build for Android, then in the Build System, you have
+to request the app use Geolocation services. This setting is in the
+Details tab of the build system.
+
+
 ABOUT MASHERY API Network
 ==================================================================
 This app is built using the WeatherBug API, part of the Mashery API 
