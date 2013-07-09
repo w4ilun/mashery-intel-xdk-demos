@@ -1,0 +1,12 @@
+#flash{
+	display:none;
+	text-align: center;
+}
+
+#flash.red{
+	background: #ff696f;
+}
+
+#flash.green{
+	background: #57ac00;
+}

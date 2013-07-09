@@ -11,7 +11,7 @@ SYNOPSIS
 ==================================================================
 
 This demo App provides a way to see the WeatherBug API in action. 
-It's built using appMobi's Cross Platform Development Kit (XDK) that 
+It's built using Intel's Cross Platform Development Kit (XDK) that 
 lets you create mobile apps for smartphones and tablets using standard 
 web languages (HTML5, CSS, and JavaScript).
 
@@ -19,7 +19,7 @@ FEATURES
 ==================================================================
 
 1. Uses WeatherBug's API to get weather forecast for the next 7 days 
-based on your current Geo Location (Using appMobi's built in GeoLocation 
+based on your current Geo Location (Using Intel's built in GeoLocation 
 Detection API)
 2. Uses WeatherBug's API to get weather forecast for the next 7 days 
 based on a zip code.
@@ -30,7 +30,7 @@ GETTING STARTED
 
 You will need the following to get started -
 
-1. appMobi's XDK. Free Download - http://www.appmobi.com/?q=node/27
+1. Intel's XDK. Free Download - http://html5dev-software.intel.com/
 2. A WeatherBug API key (Register at http://developer.weatherbug.com/member/register).
 
 OBTAINING THE API KEY
@@ -69,6 +69,22 @@ WEATHER BUG DOCUMENTATION
 To learn more about the data set provided by WeatherBug's API, you 
 can read through the API documentation at 
 http://developer.weatherbug.com/docs
+
+
+Intel XDK
+==================================================================
+Intel XDK provides tools for testing your application in a simulator,
+on your device, and building it for Apple, Android, and other stores.
+Start it at http://xdk-software.intel.com.  1. Create a new project by
+clicking on the 'Start New' button in the top left. Select 'Create
+your own from scratch,' and then 'Use a blank project.' Open the
+folder containing the new project by clicking on the folder above
+'development tools' in the top middle. Remove the current contents and
+replace it with the files in this folder.
+
+If you want to build for Android, then in the Build System, you have
+to request the app use Geolocation services. This setting is in the
+Details tab of the build system.
 
 
 ABOUT MASHERY API Network
