@@ -10,7 +10,7 @@ http://developer.mashery.com
 SYNOPSIS
 ==================================================================
 This demo App provides a way to see the Hotwire API in action. 
-It is built using appMobi's Cross Platform Development Kit (XDK) 
+It is built using Intel's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
 
@@ -24,7 +24,7 @@ GETTING STARTED
 ==================================================================
 You will need the following to get started -
 
-1. appMobi's XDK. Free Download - http://www.appmobi.com/?q=node/27
+1. Intel's XDK. Free Download - http://xdk-software.intel.com/
 2. A Hotwire API key (Register at http://developer.hotwire.com/member/register).
 
 
