@@ -8,19 +8,22 @@ var api_key ='your_api_key_here';
 // ***********************************************************
 
 // Check if valid API Key
-function check_keys(){			
-	var url = 'http://api.klout.com/1/users/show.json?&key=' + api_key;
+function check_keys(){
+	var url = 'http://api.klout.com/v2/identity.json/twitter?screenName=SteveMartinToGo&key=' + api_key;
 	AppMobi.device.getRemoteData(url,"GET","","displayFlashMessage","displayFlashMessage");
 }
 
 function displayFlashMessage (rawPayload) { 
-
   var httpStatus = '200';
   var matchString = new RegExp("code: ([0-9]{3})");
   var matchArray = rawPayload.match(matchString);
-	
+  var missingIDError = rawPayload.search("api.klout");
+
   if (matchArray) {
 	httpStatus = matchArray[1];
+  }
+  else if (missingIDError > 0) {
+  	httpStatus = '404';
   }
 
   $('#flash').show();
@@ -36,36 +39,40 @@ function displayFlashMessage (rawPayload) {
   else if(httpStatus == '202') { 
 	AppMobi.notification.alert('Profile Not Found','Invalid ID','OK');	 
 	reset_screen(); 
-	}
+	} 
   else { 
 	$('#flash').addClass('green');
 	$('#flash').html("<p class='center green'>Valid API Key Found</p>");
   }
 }
 
-function kloutUser(){	
+function kloutID(){	
 	var search = $('#search').val();
-	var url = 'http://api.klout.com/1/users/show.json?&key=' + api_key + '&users=' + search;
-	AppMobi.device.getRemoteData(url,"GET","","showUserCB","displayFlashMessage");		
+	var url = 'http://api.klout.com/v2/identity.json/twitter?screenName=' + search + '&key=' + api_key;
+	AppMobi.device.getRemoteData(url,"GET","","userInfo","displayFlashMessage");		
 }
+
+function userInfo(rawPayload){
+	var data = $.parseJSON(rawPayload);
+	var url = 'http://api.klout.com/v2/user.json/' + data.id + '?key=' + api_key;
+	AppMobi.device.getRemoteData(url,"GET","","showUserCB","displayFlashMessage");
+}
+
 
 function showUserCB(rawPayload)
 {
 	var data = $.parseJSON(rawPayload);
 	reset_screen();
-	if (!data.users) {
-		alert('No Klout profile could be located for that search query.');
+	if (!data.kloutId) {
+		AppMobi.notification.alert('Profile Not Found','Oops','OK');
+		reset_screen();
 		return false;
 	}	
-	var users = data.users;
-	$("#klout-output").show();
-	$("#klout-output .users").html('<p class="center"><strong>Klout Profiles</strong></p>');
+	var kloutId = data.kloutId;
 
-	$.each(users, function(index, user) {
-		
-		$("#klout-output .users").append('<hr/>');
-		$("#klout-output .users").append('<p>Twitter Name: @' + user.twitter_screen_name + '<br />Klout Score: ' + user.score.kscore + '<br />Class: ' + user.score.kclass + '<br />Delta (1 day / 5 day): '+user.score.delta_1day+' / '+user.score.delta_5day+'</p>');	
-	 });
+	$("#klout-output").show();
+	$("#klout-output .kloutId").html('<p class="center"><strong>Klout Profile</strong></p>');
+	$("#klout-output .kloutId").append('<p>Twitter Name: @' + data.nick + '<br />Klout Score: ' + data.score.score + '<br />Score Bucket: ' + data.score.bucket + '<br />Score Deltas: ' + '<br />    &nbsp;&nbsp;Day Change: ' + data.scoreDeltas.dayChange + '<br />    &nbsp;&nbsp;Week Change: ' + data.scoreDeltas.weekChange +'<br />    &nbsp;&nbsp;Month Change: ' + data.scoreDeltas.monthChange + '</p>');
 }
 
 function reset_screen(){
