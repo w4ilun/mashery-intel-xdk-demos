@@ -10,7 +10,7 @@ http://developer.mashery.com
 SYNOPSIS
 ==================================================================
 This demo App provides a way to see the Rotten Tomatoes API in action. 
-It's built using appMobi's Cross Platform Development Kit (XDK) 
+It's built using Intel's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
 
@@ -29,7 +29,7 @@ GETTING STARTED
 ==================================================================
 You will need the following to get started -
 
-1. appMobi's XDK - free download at http://www.appmobi.com/?q=node/27
+1. Intel's XDK - free download at http://xdk-software.intel.com/
 2. A Rotten Tomatoes API key - register at http://developer.rottentomatoes.com/member/register 
 
 

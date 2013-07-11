@@ -1,4 +1,4 @@
-Mashery Network API Demo Apps for appMobi XDK
+Mashery Network API Demo Apps for Intel XDK
 ==================================================================
 Created lovingly for the developer community by Mashery.
 
@@ -11,7 +11,7 @@ http://developer.mashery.com
 SYNOPSIS
 ==================================================================
 These demo apps provide a way to see various Mashery Network APIs 
-in action. They're built using appMobi's Cross Platform Development
+in action. They're built using Intel's Cross Platform Development
 Kit (XDK) that lets you create mobile apps for smartphones and 
 tablets using standard web languages (HTML5, CSS, and JavaScript).
 
