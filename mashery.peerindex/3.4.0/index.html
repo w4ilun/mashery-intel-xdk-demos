@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+<head>
+<title>PeerIndex API</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/xhr.js"></script> 
+
+<script src="aUX_ui.min.js"></script>
+<script src="aUX_web.all.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="peerindex.js"></script>
+
+<script type="text/javascript">
+	/* This function runs once the page is loaded, but appMobi is not yet active */
+	var init = function() {};
+	window.addEventListener("load", init, false);
+
+	/* This code prevents users from dragging the page */
+	var preventDefaultScroll = function(event) {
+		event.preventDefault();
+		window.scroll(0, 0);
+		return false;
+	};
+	document.addEventListener('touchmove', preventDefaultScroll, false);
+
+	/* This code is used to run as soon as appMobi activates */
+	var AMUi="";
+	var onDeviceReady = function() {
+		AppMobi.display.useViewport(320,480);
+		
+		//Use the appMobi UI
+		AMUi=new aUX.ui();
+		
+		check_keys();
+		
+		AppMobi.device.hideSplashScreen();
+		
+	};
+	document.addEventListener("appMobi.device.ready", onDeviceReady, false);
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="aUX_ui.css" /> 
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+</head>
+<body>
+
+	<div title="PeerIndex API" id="main" class="panel" selected="true">
+		<div id="flash"></div>
+		
+		<div id="header_images">
+			<img id="logo1" src="images/peerindex.png" style="width:90px;margin-top:7px;"/>
+			<img id="logo2" src="images/masherymade.png" style="float:right;"/>
+		</div>
+		
+		<p>PeerIndex offers a rich set of social influence data to add to your app or service. Your API key will give you access to data on millions of users of the social web, including their influence and activity-audience-authority (AAA) scores.</p>
+
+		<p>Visit <a href="https://developers.peerindex.com/" target="_blank">developers.peerindex.com</a> to get your free API key today.</p>
+
+		
+
+		<p style="text-align:center;margin-bottom:0;padding-bottom:0;">Twitter Handle @<input type="text" id="search" placeholder="Ex: mashery"/><br />
+			<span style="font-size:9px;">Enter a Twitter screen name.</span></p>
+		<p style="text-align:center;"><button id="btnUser" ontouchstart="peerIndexID();">Search PeerIndex</button>
+
+
+		<div id="output">
+			<div class="output-inner" id="peerindex-output" style="display:none;">
+				<div class="peerindexScore">
+					
+				</div>
+			</div>
+
+
+		</div>
+	</div> 
+	
+</body>
+
+</html>
