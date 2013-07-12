@@ -18,7 +18,7 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-Uses Klout's API to find Klout score based on your Twitter handle (Supports up to three comma separated handles)
+Uses Klout's API to find Klout score based on your Twitter handle.
 
 
 
