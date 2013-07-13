@@ -1,4 +1,4 @@
-KLOUT API DEMO APP
+PEERINDEX API DEMO APP
 ==================================================================
 Created lovingly for the developer community by Mashery.
 
@@ -9,7 +9,7 @@ http://developer.mashery.com
 
 SYNOPSIS
 ==================================================================
-This demo App provides a way to see the Klout API in action. 
+This demo App provides a way to see the PeerIndex API in action. 
 It's built using Intel's Cross Platform Development Kit (XDK) 
 that lets you create mobile apps for smartphones and tablets using
 standard web languages (HTML5, CSS, and JavaScript).
@@ -18,7 +18,7 @@ standard web languages (HTML5, CSS, and JavaScript).
 
 FEATURES
 ==================================================================
-Uses Klout's API to find Klout score based on your Twitter handle.
+Uses PeerIndex's API to find PeerIndex score based on your Twitter handle.
 
 
 
@@ -27,45 +27,49 @@ GETTING STARTED
 You will need the following to get started -
 
 1. Intel's XDK. Free Download - http://xdk-software.intel.com/
-2. A Klout API key (Register at http://developer.Klout.com/member/register).
+2. A PeerIndex API key (Register at https://developers.peerindex.com/member/register).
 
 
 
 OBTAINING THE API KEY
 ==================================================================
 Before you can begin using this app, you will need to get an API key 
-from Klout at http://developer.Klout.com/member/register. This will also 
+from PeerIndex at https://developers.peerindex.com/member/register. This will also 
 give you a Single Sign-On Mashery ID with access to hundreds of other APIs.
 
 
 SETTING UP THE API KEY IN THIS APP
 ==================================================================
 Once you have obtained your API key, assign the API key to the 
-variable api_key on line 1 of the file Klout.js, like so -
+variable api_key on line 1 of the file PeerIndex.js, like so -
 
 <pre>
 	var api_key ='your_api_key_here';
 </pre>
 
-ABOUT THE KLOUT API
+If your API Key surpasses the Rate Limit, contact api@peerindex.com to discuss higher usage levels.
+
+
+ABOUT THE PEERINDEX API
 ==================================================================
 
-Klout API allows developers access to the following information -
+PeerIndex API allows developers access to the following information -
 
-1. Klout Score - The Klout Score is the measurement of your overall online influence. The scores range from 1-100 with higher scores representing a wider and stronger sphere of influence.
-2. Network Influence - Network Influence is the influence level of your engaged audience. Capturing the attention of influencers is no easy task, and those who are able to do so are typically creating spectacular content.
-3. Amplification Probability -  Amplification Probability is the likelihood that your content will be acted upon. The ability to create content that compels others to respond and high-velocity content that spreads into networks beyond your own is a key component of influence.
-4. True Reach - True Reach is the size of your engaged audience. We eliminate inactive and spam accounts, and only include accounts that you influence.
-5. Influential About - The topics you are most influential about based not on what you talk about the most but on the subjects you get the most engagement on. 
-6. Influencer Of/Influenced By: These are the people who you influence and who you are influenced by based on social actions.
-
-Learn more about the Klout API at http://developer.Klout.com
+1. PeerIndex Score - A relative measure of an actor's online influence (a normalised score of range 0-100, where 0 is the lowest and 100 is the highest). For more information on the PeerIndex score, take a look at the <a href="http://help.peerindex.com/">FAQ section on peerindex.com</a>
+2. Activity (score) - Normalised 0 to 100 score representing the frequency of which the actor shares content on the social web
+3. Authority (score) - Normalised 0 to 100 score representing the degree to which the actor's audience recognises them as a thought leader
+4. Audience (score) - Normalised 0 to 100 score representing the effective size of the audience the actor's messages reach
+5. Topic score - Topic scores are normalised between 0 and 100 (A topic score of 0 indicates an actor has no recognised interest or authority in the topic. A score of 100 would indicate the actor is likely to be a world leading authority on the topic)
 
 
-KLOUT API DOCUMENTATION
+
+Learn more about the PeerIndex API at https://developers.peerindex.com/
+
+
+PEERINDEX API DOCUMENTATION
 ==================================================================
-To learn more about the data set provided by Klout's API, you can read 
-through the API documentation at http://developer.Klout.com/iodocs
+To learn more about the data set provided by PeerIndex's API, you can read 
+through the API documentation at https://developers.peerindex.com/io-docs
 
 
 ABOUT THE MASHERY API NETWORK
