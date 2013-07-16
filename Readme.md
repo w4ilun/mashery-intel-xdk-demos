@@ -19,6 +19,7 @@ tablets using standard web languages (HTML5, CSS, and JavaScript).
 GETTING STARTED
 ==================================================================
 You will need to download the Intel XDK from http://xdk-software.intel.com/
+
 You will need an API key for the platform used in the demo app. 
 This is very simple and free. Just follow the directions within the Readme.md file within each sub-directory below.
 
